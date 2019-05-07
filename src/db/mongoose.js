@@ -8,7 +8,7 @@ else{
 	var connectionURL = supersecreto.connectionURL
 }
 
-mongoose.connect( connectionURL, {
+mongoose.connect(connectionURL, {
   useNewUrlParser: true,
   useCreateIndex: true
 })
