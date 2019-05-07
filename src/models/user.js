@@ -3,14 +3,6 @@ const validator = require('validator')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
-//cambie esto
-if(process.env.NODE_ENV==='production'){
-  var secreto = process.env.secret
-}
-else{
-  const supersecreto = require('../config.js')
-  var secreto = supersecreto.secret
-}
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -124,3 +116,4 @@ userSchema.pre('save', function(next) {
 const User = mongoose.model('User', userSchema)
 
 module.exports = User
+

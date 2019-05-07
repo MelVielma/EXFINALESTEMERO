@@ -16,7 +16,7 @@ router.delete('/users', auth, users.deleteUser)
 
 router.get('/todos/:id', auth, todos.getTodo)
 router.get('/todos', auth, todos.getTodos)
-router.post('/todos', auth, todos.createTodo)//se refiere a esta
+router.post('/todos', auth, todos.createTodo)
 router.patch('/todos/:id', auth, todos.updateTodo)
 router.delete('/todos/:id', auth, todos.deleteTodo)
 

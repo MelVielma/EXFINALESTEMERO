@@ -1,5 +1,13 @@
 const User = require('../models/user')
 
+if(process.env.NODE_ENV === 'production'){
+  var secreto = process.env.secret
+}
+else{
+  const config = require('../config.js')
+  var secreto = config.secret
+}
+
 // ya no debería tener esta ruta a menos que sea un usuario tipo admin
 const getUsers = function(req, res) {
   User.find({}).then(function(users) {
